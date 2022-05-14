@@ -6,35 +6,63 @@ from django.core.mail import BadHeaderError, message, send_mail
 from django.core.mail import EmailMessage
 from django.conf import settings
 
+
 # Index Pages
 def index(request):
-    return render(request,"index/index.html")
+    return render(request, "index/index.html")
+
+
 def index1(request):
-    return render(request,"index/index-1.html")
+    return render(request, "index/index-1.html")
+
+
 def index2(request):
-    return render(request,"index/index-2.html")
+    return render(request, "index/index-2.html")
+
+
 def index3(request):
-    return render(request,"index/index-3.html")
+    return render(request, "index/index-3.html")
+
+
 def index4(request):
-    return render(request,"index/index-4.html")
+    return render(request, "index/index-4.html")
+
+
 def index5(request):
-    return render(request,"index/index-5.html")
+    return render(request, "index/index-5.html")
+
+
 def index6(request):
-    return render(request,"index/index-6.html")
+    return render(request, "index/index-6.html")
+
+
 def index7(request):
-    return render(request,"index/index-7.html")
+    return render(request, "index/index-7.html")
+
+
 def index8(request):
-    return render(request,"index/index-8.html")
+    return render(request, "index/index-8.html")
+
+
 def index9(request):
-    return render(request,"index/index-9.html")
+    return render(request, "index/index-9.html")
+
+
 def index10(request):
-    return render(request,"index/index-10.html")
+    return render(request, "index/index-10.html")
+
+
 def index11(request):
-    return render(request,"index/index-11.html")
+    return render(request, "index/index-11.html")
+
+
 def index12(request):
-    return render(request,"index/index-12.html")
+    return render(request, "index/index-12.html")
+
+
 def index13(request):
-    return render(request,"index/index-13.html")
+    return render(request, "index/index-13.html")
+
 
 # Contact Form
 def contact(request):
@@ -44,17 +72,17 @@ def contact(request):
         subject = request.POST.get("subject")
         comment = request.POST.get("comments")
         c = Contact()
-        c.name=name,
-        c.email=email,
-        c.subject=subject,
-        c.comment=comment,
+        c.name = name,
+        c.email = email,
+        c.subject = subject,
+        c.comment = comment,
         c.save()
         if name and email and subject and comment != "":
             subject = "Thank You"
-            from_mail = 'wozia@support.com'
+            from_mail = 'paradox.vr@gmail.com'
             message = "Thank you for contact us"
-            send_mail(subject, message, from_mail, [email],fail_silently=False)
+            send_mail(subject, message, from_mail, [email], fail_silently=False)
             data = {
-                'success_message' : 'Email Successfully send'
+                'success_message': 'Email Successfully send'
             }
-            return JsonResponse(data,safe=False)
+            return JsonResponse(data, safe=False)
