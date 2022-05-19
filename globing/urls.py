@@ -20,7 +20,8 @@ from globing import views
 
 urlpatterns = [
     # Index
-    path('', views.index, name="index12"),
+    path('', views.index12, name="index12"),
+    path('news', views.news, name='news'),
     path('index-1/', views.index1, name="index1"),
     path('index-2/', views.index2, name="index2"),
     path('index-3/', views.index3, name="index3"),

@@ -12,6 +12,10 @@ def index(request):
     return render(request, "index/index.html")
 
 
+def news(request):
+    return render(request, "index/news.html")
+
+
 def index1(request):
     return render(request, "index/index-1.html")
 
