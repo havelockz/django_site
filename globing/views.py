@@ -16,56 +16,9 @@ def news(request):
     return render(request, "index/news.html")
 
 
-def index1(request):
-    return render(request, "index/index-1.html")
-
-
-def index2(request):
-    return render(request, "index/index-2.html")
-
-
-def index3(request):
-    return render(request, "index/index-3.html")
-
-
-def index4(request):
-    return render(request, "index/index-4.html")
-
-
-def index5(request):
-    return render(request, "index/index-5.html")
-
-
-def index6(request):
-    return render(request, "index/index-6.html")
-
-
-def index7(request):
-    return render(request, "index/index-7.html")
-
-
-def index8(request):
-    return render(request, "index/index-8.html")
-
-
-def index9(request):
-    return render(request, "index/index-9.html")
-
-
-def index10(request):
-    return render(request, "index/index-10.html")
-
-
-def index11(request):
-    return render(request, "index/index-11.html")
-
-
 def index12(request):
     return render(request, "index/index-12.html")
 
-
-def index13(request):
-    return render(request, "index/index-13.html")
 
 
 # Contact Form

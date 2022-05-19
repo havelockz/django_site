@@ -1,55 +1,64 @@
-/* Style the container with a rounded border, grey background and some padding and margin */
-.column {
-    float: left;
-    width: 80%;
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
 }
-.filter {
-    float: left;
-    width: 20%;
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
 }
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
 /* Clear floats after the columns */
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.tit {
-    border: 2px solid #ccc;
-    background-color: #eee;
-    /*border-radius: 5px;*/
-    padding: 16px;
-    /*margin: 16px 0;*/
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* Clear floats after containers */
-.tit::after {
-    content: "";
-    clear: both;
-    display: table;
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
 }
 
-/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
-.tit img {
-    float: left;
-    margin-right: 20px;
-    border-radius: 50%;
-}
-
-/* Increase the font-size of a span element */
-.tit a {
-    font-size: 20px;
-    margin-right: 15px;
-}
-
-/* Add media queries for responsiveness. This will center both the text and the image inside the container */
-@media (max-width: 500px) {
-  .container {
-    text-align: center;
-  }
-
-  .container img {
-    margin: auto;
-    float: none;
-    display: block;
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
   }
 }
